@@ -1,1 +1,1 @@
-htpps://obocloud.github.io/portofolio
+https://obocloud.github.io/portofolio
