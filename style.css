@@ -920,7 +920,7 @@ footer span a:hover{
 
 @media (max-width: 500px) {
     .home {
-        background: url("images/banner-mobile.jpg") no-repeat center;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/banner-mobile.jpg") no-repeat center;
         background-size: cover;
         background-attachment: scroll;
     }
