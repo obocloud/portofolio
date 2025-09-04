@@ -970,24 +970,24 @@ footer span a:hover{
     }
 }
 /* Custom Timeline Styles for Activities Section */
-.activities .title {
+.journey .title {
     margin-bottom: 5px;
 }
-.activities .sub-title {
+.journey .sub-title {
     font-size: 1em;
     font-style: italic;
     color: var(--secondary-color, #777);
     margin-bottom: 30px;
     text-align: center;
 }
-.activities .timeline-header {
+.journey .timeline-header {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
-.activities .timeline-button {
+.journey .timeline-button {
     background-color: #f0f0f0;
     color: #333;
     border: none;
@@ -998,15 +998,15 @@ footer span a:hover{
     font-weight: 500;
     transition: all 0.3s ease;
 }
-.activities .timeline-button:hover {
+.journey .timeline-button:hover {
     background-color: #e0e0e0;
 }
-.activities .timeline-button.active {
+.journey .timeline-button.active {
     background-color: #7b43f7;
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.activities .timeline-line-with-dots {
+.journey .timeline-line-with-dots {
     position: relative;
     height: 2px;
     background-color: #e0e0e0;
@@ -1016,7 +1016,7 @@ footer span a:hover{
     align-items: center;
     padding: 0 20px;
 }
-.activities .timeline-line-with-dots .dot {
+.journey .timeline-line-with-dots .dot {
     width: 25px;
     height: 25px;
     background-color: #e0e0e0;
@@ -1029,23 +1029,23 @@ footer span a:hover{
     align-items: center;
     flex-shrink: 0;
 }
-.activities .timeline-line-with-dots .dot.active-dot {
+.journey .timeline-line-with-dots .dot.active-dot {
     background-color: #5cb85c;
     box-shadow: 0 0 0 5px rgba(92, 184, 92, 0.3);
 }
-.activities .timeline-line-with-dots .dot.active-dot::after {
+.journey .timeline-line-with-dots .dot.active-dot::after {
     content: '\f00c';
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: #fff;
     font-size: 0.8em;
 }
-.activities .timeline-content-wrapper {
+.journey .timeline-content-wrapper {
     position: relative;
     min-height: 150px;
     margin-top: 30px;
 }
-.activities .timeline-year-content {
+.journey .timeline-year-content {
     display: none;
     position: absolute;
     top: 0;
@@ -1053,7 +1053,7 @@ footer span a:hover{
     width: 100%;
     animation: fadeIn 0.5s forwards;
 }
-.activities .timeline-year-content.active-content {
+.journey .timeline-year-content.active-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1063,7 +1063,7 @@ footer span a:hover{
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-.activities .timeline-month-item {
+.journey .timeline-month-item {
     background-color: #f8f9fa;
     padding: 15px 20px;
     border-radius: 8px;
@@ -1073,7 +1073,7 @@ footer span a:hover{
     max-width: 250px;
     flex: 1;
 }
-.activities .timeline-month-item .month-tab {
+.journey .timeline-month-item .month-tab {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -1082,35 +1082,35 @@ footer span a:hover{
     font-weight: 600;
     margin-bottom: 10px;
 }
-.activities .timeline-month-item .tab-purple { background-color: #7b43f7; }
-.activities .timeline-month-item .tab-orange { background-color: #ff9800; }
-.activities .timeline-month-item .tab-blue { background-color: #2196f3; }
-.activities .timeline-month-item .description {
+.journey .timeline-month-item .tab-purple { background-color: #7b43f7; }
+.journey .timeline-month-item .tab-orange { background-color: #ff9800; }
+.journey .timeline-month-item .tab-blue { background-color: #2196f3; }
+.journey .timeline-month-item .description {
     font-size: 1em;
     color: #555;
     line-height: 1.5;
 }
 @media (max-width: 768px) {
-    .activities .timeline-header {
+    .journey .timeline-header {
         justify-content: flex-start;
         overflow-x: auto;
         padding-bottom: 10px;
     }
-    .activities .timeline-button {
+    .journey .timeline-button {
         flex-shrink: 0;
     }
-    .activities .timeline-line-with-dots {
+    .journey .timeline-line-with-dots {
         justify-content: flex-start;
         padding: 0 10px;
         overflow-x: auto;
     }
-    .activities .timeline-line-with-dots .dot {
+    .journey .timeline-line-with-dots .dot {
         margin: 0 15px;
     }
-    .activities .timeline-content-wrapper {
+    .journey .timeline-content-wrapper {
         min-height: 200px;
     }
-    .activities .timeline-month-item {
+    .journey .timeline-month-item {
         max-width: 90%;
         margin: 0 auto 15px auto;
     }
