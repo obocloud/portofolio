@@ -100,3 +100,24 @@ $(document).ready(function() {
     showTimelineContent(initialYear);
     updateTimelineDot(initialYear);
 });
+
+$(document).ready(function() {
+    function showTimelineContent(year) {
+        $('.timeline-year-content').removeClass('active-content').hide();
+        $('#content-' + year).addClass('active-content').show();
+    }
+    function updateTimelineDot(year) {
+        $('.timeline-line-with-dots .dot').removeClass('active-dot');
+        $('.timeline-line-with-dots .dot[data-year="' + year + '"]').addClass('active-dot');
+    }
+    $('.timeline-button').on('click', function() {
+        $('.timeline-button').removeClass('active');
+        $(this).addClass('active');
+        const selectedYear = $(this).data('year');
+        showTimelineContent(selectedYear);
+        updateTimelineDot(selectedYear);
+    });
+    const initialYear = $('.timeline-button.active').data('year');
+    showTimelineContent(initialYear);
+    updateTimelineDot(initialYear);
+});
