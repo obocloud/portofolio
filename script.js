@@ -71,3 +71,32 @@ $(document).ready(function(){
         }
     });
 });
+
+$(document).ready(function() {
+    // Fungsi untuk menampilkan konten timeline berdasarkan tahun yang aktif
+    function showTimelineContent(year) {
+        $('.timeline-year-content').removeClass('active-content').hide(); // Hide all content
+        $('#content-' + year).addClass('active-content').show(); // Show active content
+    }
+
+    // Fungsi untuk mengupdate status dot pada garis timeline
+    function updateTimelineDot(year) {
+        $('.timeline-line-with-dots .dot').removeClass('active-dot'); // Remove active from all dots
+        $('.timeline-line-with-dots .dot[data-year="' + year + '"]').addClass('active-dot'); // Add active to current dot
+    }
+
+    // Handle click event on timeline buttons
+    $('.timeline-button').on('click', function() {
+        $('.timeline-button').removeClass('active'); // Remove active from all buttons
+        $(this).addClass('active'); // Add active to the clicked button
+
+        const selectedYear = $(this).data('year');
+        showTimelineContent(selectedYear);
+        updateTimelineDot(selectedYear);
+    });
+
+    // Inisialisasi: Tampilkan konten untuk tahun pertama (2018) saat halaman dimuat
+    const initialYear = $('.timeline-button.active').data('year');
+    showTimelineContent(initialYear);
+    updateTimelineDot(initialYear);
+});
