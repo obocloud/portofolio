@@ -969,3 +969,176 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+/* Custom Timeline Styles for Activities Section */
+.activities .title {
+    margin-bottom: 50px; /* Adjust as needed */
+}
+
+/* Timeline Header (Buttons) */
+.activities .timeline-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.activities .timeline-button {
+    background-color: #f0f0f0; /* Light grey for inactive */
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.activities .timeline-button:hover {
+    background-color: #e0e0e0;
+}
+
+.activities .timeline-button.active {
+    background-color: #7b43f7; /* Purple from your image */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Line with Dots */
+.activities .timeline-line-with-dots {
+    position: relative;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between; /* Distribute dots evenly */
+    align-items: center;
+    padding: 0 20px; /* Padding for dots at ends */
+}
+
+.activities .timeline-line-with-dots .dot {
+    width: 25px;
+    height: 25px;
+    background-color: #e0e0e0; /* Default dot color */
+    border-radius: 50%;
+    position: relative;
+    top: -1px; /* Align with line */
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Prevent dots from shrinking */
+}
+
+.activities .timeline-line-with-dots .dot.active-dot {
+    background-color: #5cb85c; /* Green for active dot */
+    box-shadow: 0 0 0 5px rgba(92, 184, 92, 0.3); /* Ring effect */
+}
+
+.activities .timeline-line-with-dots .dot.active-dot::after {
+    content: '\f00c'; /* Font Awesome checkmark icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+
+/* Timeline Content Wrapper */
+.activities .timeline-content-wrapper {
+    position: relative;
+    min-height: 150px; /* Ensure space for content */
+    margin-top: 30px;
+}
+
+.activities .timeline-year-content {
+    display: none; /* Hidden by default, shown by JS */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* You might want to add some animation here for smooth transitions */
+    /* opacity: 0;
+    transition: opacity 0.5s ease; */
+}
+
+/* .activities .timeline-year-content.active-content {
+    display: flex;
+    opacity: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+} */
+.activities .timeline-year-content.active-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    animation: fadeIn 0.5s forwards; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.activities .timeline-month-item {
+    background-color: #f8f9fa; /* Light background for month items */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+    min-width: 200px; /* Minimum width for each month item */
+    max-width: 250px; /* Maximum width for each month item */
+    flex: 1; /* Allow items to grow */
+}
+
+.activities .timeline-month-item .month-tab {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Specific Tab Colors */
+.activities .timeline-month-item .tab-purple { background-color: #7b43f7; }
+.activities .timeline-month-item .tab-orange { background-color: #ff9800; }
+.activities .timeline-month-item .tab-blue { background-color: #2196f3; }
+
+.activities .timeline-month-item .description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .activities .timeline-header {
+        justify-content: flex-start; /* Align buttons to start */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        padding-bottom: 10px; /* Space for scrollbar */
+    }
+    .activities .timeline-button {
+        flex-shrink: 0; /* Prevent buttons from shrinking */
+    }
+    .activities .timeline-line-with-dots {
+        justify-content: flex-start;
+        padding: 0 10px;
+        overflow-x: auto;
+    }
+    .activities .timeline-line-with-dots .dot {
+        margin: 0 15px; /* Adjust spacing between dots */
+    }
+    .activities .timeline-content-wrapper {
+        min-height: 200px; /* Increase height for smaller screens */
+    }
+    .activities .timeline-month-item {
+        max-width: 90%; /* Adjust max-width on smaller screens */
+        margin: 0 auto 15px auto; /* Center items and add bottom margin */
+    }
+}
